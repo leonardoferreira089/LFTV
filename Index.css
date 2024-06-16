@@ -6,25 +6,53 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #044389;
+    color: #7cafc4;
     padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul li {
+.nav-left,
+.nav-center {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left {
+    flex: 0;
+}
+
+.nav-left li {
+    display: inline;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    margin-left: -80px;
+}
+
+.nav-center li {
     display: inline;
     margin: 0 10px;
 }
 
-nav ul li a {
+.nav-center li a {
     color: white;
     text-decoration: none;
+}
+
+.nav-left li a img.logo {
+    height: 40px;
+    vertical-align: middle;
 }
 
 main {
@@ -34,7 +62,7 @@ main {
 
 #current-show {
     background-color: white;
-    border: 1px solid #ddd;
+    border: 1px solid #7cafc4;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -104,4 +132,42 @@ th {
 
 .next-btn {
     right: 10px;
+}
+
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    margin: 10px 0 5px;
+}
+
+#login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#login-form button {
+    padding: 10px;
+    background-color: #044389;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #5995ed
 }
