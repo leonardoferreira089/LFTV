@@ -8,4 +8,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LFTV.Application\LFTV.Application.csproj" />
+    <ProjectReference Include="..\LFTV.Infrastructure\LFTV.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

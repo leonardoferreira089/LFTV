@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "LFTV.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/LFTV.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LFTV.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LFTV.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LFTV.Domain/LFTV.Domain.csproj",
+      "msbuildProject": "../LFTV.Domain/LFTV.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "LFTV.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuário\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

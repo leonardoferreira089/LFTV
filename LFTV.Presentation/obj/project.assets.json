@@ -75,6 +75,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "LFTV.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "LFTV.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LFTV.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LFTV.Application.dll": {}
+        }
+      },
+      "LFTV.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/LFTV.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LFTV.Domain.dll": {}
+        }
+      },
+      "LFTV.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "LFTV.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LFTV.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LFTV.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -185,10 +221,27 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "LFTV.Application/1.0.0": {
+      "type": "project",
+      "path": "../LFTV.Application/LFTV.Application.csproj",
+      "msbuildProject": "../LFTV.Application/LFTV.Application.csproj"
+    },
+    "LFTV.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LFTV.Domain/LFTV.Domain.csproj",
+      "msbuildProject": "../LFTV.Domain/LFTV.Domain.csproj"
+    },
+    "LFTV.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../LFTV.Infrastructure/LFTV.Infrastructure.csproj",
+      "msbuildProject": "../LFTV.Infrastructure/LFTV.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "LFTV.Application >= 1.0.0",
+      "LFTV.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -225,7 +278,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Application\\LFTV.Application.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Application\\LFTV.Application.csproj"
+            },
+            "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Infrastructure\\LFTV.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Infrastructure\\LFTV.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
