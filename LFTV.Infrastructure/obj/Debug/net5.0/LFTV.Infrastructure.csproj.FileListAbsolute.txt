@@ -1,0 +1,15 @@
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.deps.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\ref\LFTV.Infrastructure.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.AssemblyInfo.cs
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.csproj.CopyComplete
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\ref\LFTV.Infrastructure.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.pdb

@@ -11,6 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+
+
+
 
 namespace LFTV.Presentation
 {
@@ -28,6 +33,15 @@ namespace LFTV.Presentation
         {
 
             services.AddControllers();
+
+            services.AddAuthentication("Bearer")
+        .AddJwtBearer("Bearer", options =>
+        {
+            options.Authority = "https://localhost:<port>";
+            options.Audience = "api1";
+        });
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LFTV.Presentation", Version = "v1" });
@@ -44,10 +58,12 @@ namespace LFTV.Presentation
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LFTV.Presentation v1"));
             }
 
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

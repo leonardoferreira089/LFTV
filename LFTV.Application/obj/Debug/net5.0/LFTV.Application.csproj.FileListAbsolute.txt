@@ -1,0 +1,15 @@
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Application.deps.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\ref\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Application.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfoInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfo.cs
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.CopyComplete
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\ref\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.pdb
