@@ -12,10 +12,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-
-
-
-
+using LFTV.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+using LFTV.Infrastructure.Repositories;
 
 namespace LFTV.Presentation
 {
@@ -31,6 +30,12 @@ namespace LFTV.Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
+            services.AddDbContext<LFTVContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IProgramtvRepository, ProgramtvRepository>();
 
             services.AddControllers();
 

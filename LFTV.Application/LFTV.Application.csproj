@@ -5,18 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="DTOs\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.27.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LFTV.Domain\LFTV.Domain.csproj" />
+    <ProjectReference Include="..\LFTV.Infrastructure\LFTV.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj": {
                 "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj"
+              },
+              "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Infrastructure\\LFTV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Infrastructure\\LFTV.Infrastructure.csproj"
               }
             }
           }
@@ -49,9 +52,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.27.0, )"
             }
           },
           "imports": [
@@ -186,6 +197,30 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
@@ -255,9 +290,29 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

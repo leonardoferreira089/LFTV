@@ -15,14 +15,14 @@ namespace LFTV.Presentation.Controllers
         public IActionResult GetCurrentProgram()
         {
             // Simulation de données pour l'instant
-            var program = new
+            var programTv = new
             {
                 Image = "https://example.com/image.jpg",
                 Description = "Description de l'émission en cours.",
                 Link = "https://example.com/program"
             };
 
-            return Ok(program);
+            return Ok(programTv);
         }
     }
 }

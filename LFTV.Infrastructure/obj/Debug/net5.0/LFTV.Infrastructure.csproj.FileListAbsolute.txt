@@ -1,4 +1,6 @@
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.deps.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.runtimeconfig.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.runtimeconfig.dev.json
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\ref\LFTV.Infrastructure.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net5.0\LFTV.Infrastructure.pdb
@@ -13,3 +15,4 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\ref\LFTV.Infrastructure.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net5.0\LFTV.Infrastructure.genruntimeconfig.cache
