@@ -16,6 +16,7 @@ namespace LFTV.Infrastructure.Persistence
         public DbSet<ProgramTv> TvPrograms { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<History> History { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

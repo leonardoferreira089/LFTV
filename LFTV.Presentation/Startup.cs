@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using LFTV.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using LFTV.Infrastructure.Repositories;
+using LFTV.Infrastructure.Services;
 
 namespace LFTV.Presentation
 {
@@ -36,6 +37,12 @@ namespace LFTV.Presentation
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IProgramtvRepository, ProgramtvRepository>();
+            services.AddScoped<IProgramTvService, ProgramTvService>();
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
+            services.AddScoped<IScheduleService, ScheduleService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
 
             services.AddControllers();
 

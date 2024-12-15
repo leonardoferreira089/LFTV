@@ -1,3 +1,7 @@
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfoInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfo.cs
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.CoreCompileInputs.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\selenium-manager\linux\selenium-manager
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\selenium-manager\macos\selenium-manager
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\selenium-manager\windows\selenium-manager.exe
@@ -10,10 +14,6 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\ne
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Domain.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net5.0\LFTV.Infrastructure.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.AssemblyReference.cache
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfoInputs.cache
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.AssemblyInfo.cs
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.CoreCompileInputs.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.csproj.CopyComplete
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\LFTV.Application.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net5.0\ref\LFTV.Application.dll
