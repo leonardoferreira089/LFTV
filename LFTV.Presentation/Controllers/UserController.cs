@@ -1,7 +1,5 @@
-﻿using LFTV.Application.Commands.History;
-using LFTV.Infrastructure.Repositories;
+﻿using LFTV.Application.Commands.User;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,18 +10,18 @@ namespace LFTV.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HistoryController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public HistoryController(IMediator mediator)
+        public UserController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        // POST: api/History
+        // POST: api/User
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateHistoryCommand command)
+        public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
             if (command == null)
             {

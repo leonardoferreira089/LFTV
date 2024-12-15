@@ -1,5 +1,9 @@
-﻿using LFTV.Domain.Entities;
+﻿using LFTV.Application.Commands.ProgramTv;
+using LFTV.Application.Queries.ProgramTv;
+using LFTV.Domain.Entities;
 using LFTV.Infrastructure.Repositories;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,73 +13,29 @@ using System.Threading.Tasks;
 
 namespace LFTV.Presentation.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
-    public class ProgramTVController : ControllerBase
+    [ApiController]
+    public class ProgramTvController : ControllerBase
     {
-        private readonly IProgramtvRepository _programtvRepository;
+        private readonly IMediator _mediator;
 
-        public ProgramTVController(IProgramtvRepository programtvRepository)
+        public ProgramTvController(IMediator mediator)
         {
-            _programtvRepository = programtvRepository;
+            _mediator = mediator;
         }
 
-        // GET: api/program
-        [HttpGet]
-        public async Task<IActionResult> GetAllPrograms()
-        {
-            var tvprograms = await _programtvRepository.GetAllProgramsAsync();
-            return Ok(tvprograms);
-        }
-
-        // GET: api/program/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetProgramById(int id)
-        {
-            var program = await _programtvRepository.GetProgramByIdAsync(id);
-
-            if (program == null)
-                return NotFound($"Program with ID {id} not found.");
-
-            return Ok(program);
-        }
-
-        // POST: api/program
+        // POST: api/ProgramTv
         [HttpPost]
-        public async Task<IActionResult> CreateProgram([FromBody] ProgramTv programtv)
+        public async Task<IActionResult> Create([FromBody] CreateProgramTvCommand command)
         {
-            if (programtv == null)
-                return BadRequest("Invalid program data.");
-
-            await _programtvRepository.AddProgramAsync(programtv);
-            return CreatedAtAction(nameof(GetProgramById), new { id = programtv.Id }, programtv);
-        }
-
-        // PUT: api/program/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProgram(int id, [FromBody] ProgramTv programtv)
-        {
-            if (id != programtv.Id)
-                return BadRequest("ID mismatch.");
-
-            var existingProgram = await _programtvRepository.GetProgramByIdAsync(id);
-            if (existingProgram == null)
-                return NotFound($"Program with ID {id} not found.");
-
-            await _programtvRepository.UpdateProgramAsync(programtv);
-            return NoContent();
-        }
-
-        // DELETE: api/program/{id}
-        [HttpDelete("{id}")]
-            public async Task<IActionResult> DeleteProgram(int id)
+            if (command == null)
             {
-                var tvprogram = await _programtvRepository.GetProgramByIdAsync(id);
-                if (tvprogram == null)
-                    return NotFound($"Program with ID {id} not found.");
-
-                await _programtvRepository.DeleteProgramAsync(id);  
-                return NoContent();
+                return BadRequest("Invalid data.");
             }
+
+            var result = await _mediator.Send(command);
+
+            return CreatedAtAction(nameof(Create), new { id = result }, result);
         }
+    }
 }

@@ -28,26 +28,25 @@ namespace LFTV.Infrastructure.Repositories
             return await _context.Users.ToListAsync();
         }
 
-        public async Task AddAsync(User user)
+        public async Task<User> AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
+            return user;
         }
 
-        public async Task UpdateAsync(User user)
+        public async Task<User> UpdateAsync(User user)
         {
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
+            return user;
         }
 
-        public async Task DeleteAsync(int id)
+        // Implémentation de la méthode DeleteAsync
+        public async Task DeleteAsync(User user)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
-            }
+            _context.Users.Remove(user);  // Supprime l'utilisateur de la base de données
+            await _context.SaveChangesAsync();  // Enregistre les modifications
         }
 
         public async Task<User> GetByUsernameAsync(string username)

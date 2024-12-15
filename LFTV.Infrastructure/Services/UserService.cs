@@ -39,9 +39,9 @@ namespace LFTV.Infrastructure.Services
             await _userRepository.UpdateAsync(user);
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(User user)
         {
-            await _userRepository.DeleteAsync(id);
+            await _userRepository.DeleteAsync(user);
         }
 
         public async Task<User> GetUserByUsernameAsync(string username)

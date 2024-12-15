@@ -2,6 +2,7 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net5.0\
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net5.0\LFTV.Domain.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net5.0\ref\LFTV.Domain.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net5.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net5.0\LFTV.Domain.csproj.AssemblyReference.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net5.0\LFTV.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net5.0\LFTV.Domain.AssemblyInfoInputs.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net5.0\LFTV.Domain.AssemblyInfo.cs

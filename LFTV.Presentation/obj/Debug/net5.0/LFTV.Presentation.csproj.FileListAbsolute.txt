@@ -1,6 +1,3 @@
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\net5.0\appsettings.json
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\net5.0\selenium-manager\linux\selenium-manager
@@ -64,6 +61,10 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\n
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\net5.0\LFTV.Infrastructure.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\bin\Debug\net5.0\LFTV.Domain.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\LFTV.Presentation.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\staticwebassets\LFTV.Presentation.StaticWebAssets.Manifest.cache
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\staticwebassets\LFTV.Presentation.StaticWebAssets.xml
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Presentation\obj\Debug\net5.0\scopedcss\bundle\LFTV.Presentation.styles.css

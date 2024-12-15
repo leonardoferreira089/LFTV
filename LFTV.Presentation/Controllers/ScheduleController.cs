@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LFTV.Application.Commands.Schedule;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,23 +9,29 @@ using System.Threading.Tasks;
 
 namespace LFTV.Presentation.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class ScheduleController : ControllerBase
     {
-        private static List<object> schedules = new List<object>();
+        private readonly IMediator _mediator;
 
-        [HttpPost]
-        public IActionResult CreateSchedule([FromBody] dynamic schedule)
+        public ScheduleController(IMediator mediator)
         {
-            schedules.Add(schedule);
-            return Created("", schedule);
+            _mediator = mediator;
         }
 
-        [HttpGet]
-        public IActionResult GetSchedules()
+        // POST: api/Schedule
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateScheduleCommand command)
         {
-            return Ok(schedules);
+            if (command == null)
+            {
+                return BadRequest("Invalid data.");
+            }
+
+            var result = await _mediator.Send(command);
+
+            return CreatedAtAction(nameof(Create), new { id = result }, result);
         }
     }
 }

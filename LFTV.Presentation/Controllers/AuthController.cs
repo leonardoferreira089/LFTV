@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LFTV.Infrastructure.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,20 +8,35 @@ using System.Threading.Tasks;
 
 namespace LFTV.Presentation.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class AuthController : ControllerBase
     {
-        [HttpPost("register")]
-        public IActionResult Register([FromBody] dynamic user)
+        private readonly LftvAuthenticationService _authenticationService;
+
+        public AuthController(LftvAuthenticationService authenticationService)
         {
-            return Ok(new { message = "Compte créé avec succès." });
+            _authenticationService = authenticationService;
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] dynamic credentials)
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            return Ok(new { token = "fake-jwt-token" });
+            // Simuler une authentification
+            // Cela pourrait être remplacé par une vérification réelle des utilisateurs dans une base de données
+            if (loginRequest.Username == "admin" && loginRequest.Password == "password")
+            {
+                var token = await _authenticationService.GenerateJwtToken(loginRequest.Username);
+                return Ok(new { Token = token });
+            }
+
+            return Unauthorized();
         }
+    }
+
+    public class LoginRequest
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }
