@@ -1,0 +1,49 @@
+/* _content/LFTV/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-ux1n40srhg] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-ux1n40srhg] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ux1n40srhg] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ux1n40srhg], .nav-pills .show > .nav-link[b-ux1n40srhg] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ux1n40srhg] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ux1n40srhg] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ux1n40srhg] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ux1n40srhg] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ux1n40srhg] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
