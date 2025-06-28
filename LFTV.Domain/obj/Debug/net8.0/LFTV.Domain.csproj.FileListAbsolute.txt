@@ -1,0 +1,12 @@
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net8.0\LFTV.Domain.deps.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net8.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\bin\Debug\net8.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.AssemblyInfo.cs
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.sourcelink.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\refint\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Domain\obj\Debug\net8.0\ref\LFTV.Domain.dll
