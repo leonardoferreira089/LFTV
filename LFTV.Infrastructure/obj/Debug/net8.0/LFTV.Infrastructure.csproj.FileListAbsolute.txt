@@ -10,3 +10,11 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\refint\LFTV.Infrastructure.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\LFTV.Infrastructure.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\ref\LFTV.Infrastructure.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net8.0\LFTV.Infrastructure.runtimeconfig.json
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net8.0\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net8.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net8.0\LFTV.Application.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\bin\Debug\net8.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\LFTV.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\LFTV.Inf.3BFCBE4C.Up2Date
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Infrastructure\obj\Debug\net8.0\LFTV.Infrastructure.genruntimeconfig.cache

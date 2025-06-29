@@ -10,3 +10,7 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\ne
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net8.0\refint\LFTV.Application.dll
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net8.0\LFTV.Application.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net8.0\ref\LFTV.Application.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net8.0\LFTV.Domain.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\bin\Debug\net8.0\LFTV.Domain.pdb
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net8.0\LFTV.Application.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.Application\obj\Debug\net8.0\LFTV.App.D25D050A.Up2Date

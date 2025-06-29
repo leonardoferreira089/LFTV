@@ -1,0 +1,99 @@
+##################################
+# Ignorer les fichiers de build #
+##################################
+
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.mdb
+
+#####################################
+# Ignorer les fichiers utilisateurs #
+#####################################
+
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vsp
+*.vspscc
+*.vssscc
+*.ncb
+*.log
+*.sdf
+*.dbmdl
+
+#########################
+# Dossiers spécifiques  #
+#########################
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Tests et couverture
+TestResults/
+*.coverage
+*.coveragexml
+
+#################################
+# Fichiers de config temporaire #
+#################################
+
+*.DotSettings.user
+*.orig
+*.bak
+*.tmp
+*.swp
+
+#################################
+# Config .NET / EF / Secrets    #
+#################################
+
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json.user
+secrets.json
+
+# Outil de migration EF Core
+Migrations/
+
+# Fichiers de configuration globale ou outil CLI
+.dotnet-tools.json
+global.json
+
+########################
+# Fichiers personnalisés
+########################
+
+# Dossier de publication
+publish/
+
+# Dump local ou fichiers SQL perso
+*.sql
+*.bak
+
+# Cache NuGet
+packages/
+.nuget/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*.swp
+*~
+
