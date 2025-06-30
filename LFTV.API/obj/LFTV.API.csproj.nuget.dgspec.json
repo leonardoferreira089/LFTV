@@ -279,9 +279,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Application\\LFTV.Application.csproj": {
-                "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Application\\LFTV.Application.csproj"
-              },
               "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj": {
                 "projectPath": "C:\\Users\\Usuário\\Desktop\\LFDEV\\.Net Projects\\LFTV\\LFTV.Domain\\LFTV.Domain.csproj"
               }
@@ -304,6 +301,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.6, )"
