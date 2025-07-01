@@ -28,7 +28,7 @@ namespace LFTV.Infrastructure.Data
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Email).IsRequired().HasMaxLength(255);
                 entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(255);
-            });
+            });            
 
             // Emission Configuration
             modelBuilder.Entity<Emission>(entity =>
@@ -49,6 +49,7 @@ namespace LFTV.Infrastructure.Data
                 entity.Property(e => e.Type).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Category).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.ImageUrl).HasMaxLength(500);
+                entity.Property(e => e.EpisodeUrl).HasMaxLength(500);
 
                 // Foreign Key relationship
                 entity.HasOne(e => e.Emission)

@@ -1,4 +1,6 @@
+using LFTV.Domain.Interfaces;
 using LFTV.Infrastructure.Data;
+using LFTV.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,12 @@ builder.Services.AddDbContext<LFTVDbContext>(options =>
 #endif
 });
 
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IProgramContentRepository, ProgramContentRepository>();
+builder.Services.AddScoped<IEmissionRepository, EmissionRepository>();
+builder.Services.AddScoped<ICalendarEntryRepository, CalendarEntryRepository>();
+builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
+// ... idem pour les autres repos spécifiques
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -20,6 +20,7 @@ namespace LFTV.Domain.Entities
 
         [StringLength(500)]
         public string? ImageUrl { get; set; }
+        public string? EpisodeUrl { get; set; }
 
         public bool IsWatched { get; set; } = false;
 
