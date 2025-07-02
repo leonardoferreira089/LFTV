@@ -25,7 +25,8 @@ builder.Services.AddScoped<IProgramContentRepository, ProgramContentRepository>(
 builder.Services.AddScoped<IEmissionRepository, EmissionRepository>();
 builder.Services.AddScoped<ICalendarEntryRepository, CalendarEntryRepository>();
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
-// ... idem pour les autres repos spécifiques
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
