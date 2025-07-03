@@ -1,3 +1,5 @@
+using LFTV.Application.Interfaces;
+using LFTV.Application.Services;
 using LFTV.Domain.Interfaces;
 using LFTV.Infrastructure.Data;
 using LFTV.Infrastructure.Repositories;
@@ -26,7 +28,7 @@ builder.Services.AddScoped<IEmissionRepository, EmissionRepository>();
 builder.Services.AddScoped<ICalendarEntryRepository, CalendarEntryRepository>();
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddScoped<IProgramContentService, ProgramContentService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
