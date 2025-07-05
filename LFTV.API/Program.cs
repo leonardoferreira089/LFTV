@@ -29,6 +29,10 @@ builder.Services.AddScoped<ICalendarEntryRepository, CalendarEntryRepository>();
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProgramContentService, ProgramContentService>();
+builder.Services.AddScoped<IEmissionService, EmissionService>();
+builder.Services.AddScoped<ICalendarEntryService, CalendarEntryService>();
+builder.Services.AddScoped<IHistoryService, HistoryService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
