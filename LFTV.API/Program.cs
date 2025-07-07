@@ -1,9 +1,11 @@
+using FluentValidation;
 using LFTV.Application.Interfaces;
 using LFTV.Application.Services;
 using LFTV.Domain.Interfaces;
 using LFTV.Infrastructure.Data;
 using LFTV.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +35,9 @@ builder.Services.AddScoped<IEmissionService, EmissionService>();
 builder.Services.AddScoped<ICalendarEntryService, CalendarEntryService>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<CreateUserDtoValidator>();
+builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
