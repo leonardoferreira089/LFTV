@@ -11,8 +11,7 @@
         {
             return new HistoryDto
             {
-                Id = entity.Id,
-                UserId = entity.UserId,
+                Id = entity.Id, 
                 ProgramContentId = entity.ProgramContentId,
                 WatchedDate = entity.WatchedDate
             };

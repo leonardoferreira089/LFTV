@@ -11,8 +11,5 @@ public class CreateHistoryDtoValidator : AbstractValidator<CreateHistoryDto>
 
         RuleFor(x => x.ProgramContentId)
             .GreaterThan(0).WithMessage("L'identifiant du contenu programmé est obligatoire.");
-
-        RuleFor(x => x.UserId)
-            .GreaterThan(0).WithMessage("L'identifiant de l'utilisateur est obligatoire.");
     }
 }

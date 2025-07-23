@@ -12,9 +12,7 @@ namespace LFTV.Infrastructure.Repositories
         public async Task<IEnumerable<History>> GetByUserIdAsync(int userId)
         {
             return await _dbSet
-                .Include(h => h.Program)
-                .Where(h => h.UserId == userId)
-                .ToListAsync();
+                .Include(h => h.Program).ToListAsync();
         }
     }
 }

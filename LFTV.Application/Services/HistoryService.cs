@@ -36,7 +36,6 @@ namespace LFTV.Application.Services
         {
             var entity = new History
             {
-                UserId = dto.UserId,
                 ProgramContentId = dto.ProgramContentId,
                 WatchedDate = dto.WatchedAt
             };

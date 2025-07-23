@@ -10,7 +10,6 @@ namespace LFTV.Infrastructure.Data
         }
 
         // DbSets
-        public DbSet<User> Users { get; set; }
         public DbSet<Emission> Emissions { get; set; }
         public DbSet<ProgramContent> ProgramContents { get; set; }
         public DbSet<CalendarEntry> CalendarEntries { get; set; }
@@ -18,17 +17,7 @@ namespace LFTV.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            // User Configuration
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.HasIndex(e => e.Email).IsUnique();
-                entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
-                entity.Property(e => e.Email).IsRequired().HasMaxLength(255);
-                entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(255);
-            });            
+            base.OnModelCreating(modelBuilder);        
 
             // Emission Configuration
             modelBuilder.Entity<Emission>(entity =>
@@ -86,14 +75,9 @@ namespace LFTV.Infrastructure.Data
                       .HasForeignKey(e => e.ProgramContentId)
                       .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.User)
-                      .WithMany(e => e.HistoryEntries)
-                      .HasForeignKey(e => e.UserId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
                 // Index for performance
                 entity.HasIndex(e => e.WatchedDate);
-                entity.HasIndex(e => new { e.UserId, e.ProgramContentId });
+                entity.HasIndex(e => new {e.ProgramContentId });
             });
 
             // Seed Data avec des valeurs STATIQUES
@@ -107,24 +91,7 @@ namespace LFTV.Infrastructure.Data
             var createdDate = new DateTime(2025, 6, 28, 12, 0, 0, DateTimeKind.Utc);
 
             // Seed Users
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 1,
-                    Name = "Leonardo Ferreira",
-                    Email = "leonardo@lftv.com",
-                    PasswordHash = "AQAAAAEAACcQAAAAEFtJVZI8ZQ8zTZnKtJ8uLaXbO5MgP8vNjBZ7y4kE3pR9vT1w2X3c4",
-                    CreatedAt = createdDate
-                },
-                new User
-                {
-                    Id = 2,
-                    Name = "Admin User",
-                    Email = "admin@lftv.com",
-                    PasswordHash = "AQAAAAEAACcQAAAAEKL5Q7z8X9Y2N3M4P5Q6R7S8T9U0V1W2X3Y4Z5A6B7C8D9E0F1G2H3",
-                    CreatedAt = createdDate.AddDays(-30)
-                }
-            );
+
 
             // Seed Emissions pour les 7 prochains jours
             modelBuilder.Entity<Emission>().HasData(
@@ -173,8 +140,8 @@ namespace LFTV.Infrastructure.Data
 
             // Seed History
             modelBuilder.Entity<History>().HasData(
-                new History { Id = 1, WatchedDate = baseDate.AddDays(-1), ProgramContentId = 1, UserId = 1, CreatedAt = createdDate },
-                new History { Id = 2, WatchedDate = baseDate.AddDays(-2), ProgramContentId = 3, UserId = 1, CreatedAt = createdDate }
+                new History { Id = 1, WatchedDate = baseDate.AddDays(-1), ProgramContentId = 1, CreatedAt = createdDate },
+                new History { Id = 2, WatchedDate = baseDate.AddDays(-2), ProgramContentId = 3, CreatedAt = createdDate }
             );
         }
     }

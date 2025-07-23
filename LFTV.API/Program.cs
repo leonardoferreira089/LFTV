@@ -5,6 +5,9 @@ using LFTV.Domain.Interfaces;
 using LFTV.Infrastructure.Data;
 using LFTV.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,20 +32,33 @@ builder.Services.AddScoped<IProgramContentRepository, ProgramContentRepository>(
 builder.Services.AddScoped<IEmissionRepository, EmissionRepository>();
 builder.Services.AddScoped<ICalendarEntryRepository, CalendarEntryRepository>();
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProgramContentService, ProgramContentService>();
 builder.Services.AddScoped<IEmissionService, EmissionService>();
 builder.Services.AddScoped<ICalendarEntryService, CalendarEntryService>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
-builder.Services.AddScoped<IUserService, UserService>();
 
-builder.Services.AddValidatorsFromAssemblyContaining<CreateUserDtoValidator>();
-builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAuthorization();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
+
 var app = builder.Build();
+
+
+
+app.UseHttpsRedirection();
+// Utilisez CORS
+app.UseCors("AllowAll");
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

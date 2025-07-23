@@ -181,3 +181,4 @@ C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.API\bin\Debug\net8.0\LFT
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.API\bin\Debug\net8.0\LFTV.Infrastructure.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.API\bin\Debug\net8.0\LFTV.Domain.pdb
 C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Usuário\Desktop\LFDEV\.Net Projects\LFTV\LFTV.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
