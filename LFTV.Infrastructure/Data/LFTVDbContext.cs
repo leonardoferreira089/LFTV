@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using LFTV.Domain.Entities;
+using LFTV.Domain.Enums;
 
 namespace LFTV.Infrastructure.Data
 {
@@ -24,7 +25,7 @@ namespace LFTV.Infrastructure.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(200);
-                entity.Property(e => e.Date).IsRequired();
+                entity.Property(e => e.Jour).HasConversion<int>().IsRequired();
                 entity.Property(e => e.StartTime).IsRequired();
                 entity.Property(e => e.EndTime).IsRequired();
                 entity.Property(e => e.ImageUrl).HasMaxLength(500);
@@ -95,20 +96,18 @@ namespace LFTV.Infrastructure.Data
 
             // Seed Emissions pour les 7 prochains jours
             modelBuilder.Entity<Emission>().HasData(
-                // Jour 1 - Aujourd'hui (29/06/2025)
-                new Emission { Id = 1, Name = "Journal du Matin - 29/06", Date = baseDate, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 2, Name = "Journal de 13h - 29/06", Date = baseDate, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 3, Name = "Film du Dimanche - 29/06", Date = baseDate, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate },
+                new Emission { Id = 1, Name = "Journal du Matin", Jour = DayOfWeekEnum.Lundi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+    new Emission { Id = 2, Name = "Journal de 13h", Jour = DayOfWeekEnum.Lundi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+    new Emission { Id = 3, Name = "Film du Dimanche", Jour = DayOfWeekEnum.Dimanche, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate },
 
-                // Jour 2 - 30/06/2025
-                new Emission { Id = 4, Name = "Journal du Matin - 30/06", Date = baseDate.AddDays(1), StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 5, Name = "Journal de 13h - 30/06", Date = baseDate.AddDays(1), StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 6, Name = "Série du Lundi - 30/06", Date = baseDate.AddDays(1), StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(21, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Serie", CreatedAt = createdDate },
+                new Emission { Id = 4, Name = "Journal du Matin - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+                new Emission { Id = 5, Name = "Journal de 13h - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+                new Emission { Id = 6, Name = "Série du Lundi - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(21, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Serie", CreatedAt = createdDate },
 
                 // Jour 3 - 01/07/2025
-                new Emission { Id = 7, Name = "Journal du Matin - 01/07", Date = baseDate.AddDays(2), StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 8, Name = "Journal de 13h - 01/07", Date = baseDate.AddDays(2), StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-                new Emission { Id = 9, Name = "Film du Mardi - 01/07", Date = baseDate.AddDays(2), StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate }
+                new Emission { Id = 7, Name = "Journal du Matin - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+                new Emission { Id = 8, Name = "Journal de 13h - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+                new Emission { Id = 9, Name = "Film du Mardi - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate }
             );
 
             // Seed ProgramContents

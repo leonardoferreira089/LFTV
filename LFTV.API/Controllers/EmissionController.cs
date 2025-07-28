@@ -32,9 +32,9 @@ namespace LFTV.API.Controllers
         }
 
         [HttpGet("date/{date}")]
-        public async Task<ActionResult<IEnumerable<EmissionDto>>> GetByDate(DateTime date)
+        public async Task<ActionResult<IEnumerable<EmissionDto>>> GetByDate(DayOfWeek jour)
         {
-            var emissions = await _service.GetByDateAsync(date);
+            var emissions = await _service.GetByJourAsync(jour);
             return Ok(emissions);
         }
 

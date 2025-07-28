@@ -26,9 +26,10 @@ namespace LFTV.Application.Services
             return entity == null ? null : EmissionDto.FromEntity(entity);
         }
 
-        public async Task<IEnumerable<EmissionDto>> GetByDateAsync(DateTime date)
+        public async Task<IEnumerable<EmissionDto>> GetByJourAsync(DayOfWeek jour)
         {
-            var list = await _repository.GetByDateAsync(date);
+            var jourEnum = (LFTV.Domain.Enums.DayOfWeekEnum)((int)jour + 1); // +1 car System.DayOfWeek commence à 0 pour dimanche
+            var list = await _repository.GetByJourAsync(jourEnum);
             return list.Select(EmissionDto.FromEntity);
         }
 
@@ -37,7 +38,7 @@ namespace LFTV.Application.Services
             var entity = new Emission
             {
                 Name = dto.Name,
-                Date = dto.Date,
+                Jour = dto.Jour,
                 StartTime = dto.StartTime,
                 EndTime = dto.EndTime,
                 ImageUrl = dto.ImageUrl,
@@ -54,7 +55,7 @@ namespace LFTV.Application.Services
             if (entity == null) throw new Exception("Emission not found");
 
             entity.Name = dto.Name;
-            entity.Date = dto.Date;
+            entity.Jour = dto.Jour;
             entity.StartTime = dto.StartTime;
             entity.EndTime = dto.EndTime;
             entity.ImageUrl = dto.ImageUrl;

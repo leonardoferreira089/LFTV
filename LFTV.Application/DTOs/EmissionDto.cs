@@ -1,10 +1,12 @@
-﻿namespace LFTV.Application.DTOs
+﻿using LFTV.Domain.Enums;
+
+namespace LFTV.Application.DTOs
 {
     public class EmissionDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = "";
-        public DateTime Date { get; set; }
+        public DayOfWeekEnum Jour { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public string? ImageUrl { get; set; }
@@ -16,7 +18,7 @@
             {
                 Id = entity.Id,
                 Name = entity.Name,
-                Date = entity.Date,
+                Jour = entity.Jour,
                 StartTime = entity.StartTime,
                 EndTime = entity.EndTime,
                 ImageUrl = entity.ImageUrl,

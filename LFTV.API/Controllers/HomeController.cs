@@ -1,6 +1,8 @@
 ﻿using LFTV.Application.DTOs;
 using LFTV.Application.Interfaces;
+using LFTV.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
+using System.Formats.Asn1;
 
 namespace LFTV.API.Controllers
 {
@@ -23,8 +25,9 @@ namespace LFTV.API.Controllers
         [HttpGet("today")]
         public async Task<ActionResult<IEnumerable<EmissionDto>>> GetTodayPrograms()
         {
-            var today = DateTime.UtcNow.Date;
-            var emissions = await _emissionService.GetByDateAsync(today);
+            var systemJour = DateTime.UtcNow.DayOfWeek; // System.DayOfWeek
+
+            var emissions = await _emissionService.GetByJourAsync(systemJour);
             return Ok(emissions);
         }
 
@@ -33,12 +36,19 @@ namespace LFTV.API.Controllers
         public async Task<ActionResult<IEnumerable<EmissionDto>>> GetNowPlaying()
         {
             var now = DateTime.UtcNow;
-            var today = now.Date;
-            var emissions = await _emissionService.GetByDateAsync(today);
+            var systemJour = now.DayOfWeek;
+
+            var emissions = await _emissionService.GetByJourAsync(systemJour);
             var current = emissions.Where(e =>
                 e.StartTime <= now.TimeOfDay && e.EndTime > now.TimeOfDay
             ).ToList();
             return Ok(current);
+        }
+
+        private DayOfWeekEnum ConvertToLftvJour(DayOfWeek systemJour)
+        {
+            int value = systemJour == DayOfWeek.Sunday ? 7 : (int)systemJour;
+            return (DayOfWeekEnum)value;
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LFTV.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+303bdd9666b9dbb5a24141c41179e391fcb1ba4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd2ecf4358002bfb00443ec0ece03bcc472e8e8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LFTV.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LFTV.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

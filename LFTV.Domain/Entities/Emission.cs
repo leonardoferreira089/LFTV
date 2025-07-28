@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using LFTV.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace LFTV.Domain.Entities
 {
@@ -11,7 +12,7 @@ namespace LFTV.Domain.Entities
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        public DateTime Date { get; set; }
+        public DayOfWeekEnum Jour { get; set; }
 
         [Required]
         public TimeSpan StartTime { get; set; }

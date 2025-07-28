@@ -6,7 +6,7 @@ namespace LFTV.Application.Interfaces
     {
         Task<IEnumerable<EmissionDto>> GetAllAsync();
         Task<EmissionDto?> GetByIdAsync(int id);
-        Task<IEnumerable<EmissionDto>> GetByDateAsync(DateTime date);
+        Task<IEnumerable<EmissionDto>> GetByJourAsync(System.DayOfWeek jour);
         Task<EmissionDto> CreateAsync(CreateEmissionDto dto);
         Task UpdateAsync(int id, UpdateEmissionDto dto);
         Task DeleteAsync(int id);
