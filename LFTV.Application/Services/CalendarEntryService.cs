@@ -36,7 +36,7 @@ namespace LFTV.Application.Services
         {
             var entity = new CalendarEntry
             {
-                Date = dto.Date,
+                Jour = dto.Jour,
                 EmissionId = dto.EmissionId,
                 CreatedAt = DateTime.UtcNow
             };
@@ -50,7 +50,7 @@ namespace LFTV.Application.Services
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null) throw new Exception("CalendarEntry not found");
 
-            entity.Date = dto.Date;
+            entity.Jour = dto.Jour;
             entity.EmissionId = dto.EmissionId;
             await _repository.SaveChangesAsync();
         }

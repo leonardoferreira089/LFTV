@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using LFTV.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace LFTV.Domain.Entities
 {
@@ -7,8 +8,7 @@ namespace LFTV.Domain.Entities
         public int Id { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
-
+        public DayOfWeekEnum Jour { get; set; }
         // Foreign Key
         public int EmissionId { get; set; }
 

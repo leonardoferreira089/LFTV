@@ -12,7 +12,7 @@ namespace LFTV.Infrastructure.Repositories
         public async Task<IEnumerable<CalendarEntry>> GetByMonthAsync(int year, int month)
         {
             return await _dbSet
-                .Where(c => c.Date.Year == year && c.Date.Month == month)
+                .Where(c => c.Jour == c.Jour)
                 .ToListAsync();
         }
     }

@@ -1,4 +1,5 @@
 ﻿using LFTV.Application.DTOs;
+using LFTV.Domain.Enums;
 
 namespace LFTV.Application.Interfaces
 {
@@ -9,6 +10,6 @@ namespace LFTV.Application.Interfaces
         Task<IEnumerable<EmissionDto>> GetByJourAsync(System.DayOfWeek jour);
         Task<EmissionDto> CreateAsync(CreateEmissionDto dto);
         Task UpdateAsync(int id, UpdateEmissionDto dto);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(int id);      
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace LFTV.Application.DTOs
+﻿using LFTV.Domain.Enums;
+
+namespace LFTV.Application.DTOs
 {
     public class CalendarEntryDto
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
+        public DayOfWeekEnum Jour { get; set; }
         public int EmissionId { get; set; }
         public DateTime CreatedAt { get; set; }
 
@@ -12,7 +14,7 @@
             return new CalendarEntryDto
             {
                 Id = entity.Id,
-                Date = entity.Date,
+                Jour = entity.Jour,
                 EmissionId = entity.EmissionId,
                 CreatedAt = entity.CreatedAt
             };

@@ -1,6 +1,7 @@
 ﻿using LFTV.Application.DTOs;
 using LFTV.Application.Interfaces;
 using LFTV.Domain.Entities;
+using LFTV.Domain.Enums;
 using LFTV.Domain.Interfaces;
 
 namespace LFTV.Application.Services
@@ -28,7 +29,7 @@ namespace LFTV.Application.Services
 
         public async Task<IEnumerable<EmissionDto>> GetByJourAsync(DayOfWeek jour)
         {
-            var jourEnum = (LFTV.Domain.Enums.DayOfWeekEnum)((int)jour + 1); // +1 car System.DayOfWeek commence à 0 pour dimanche
+            var jourEnum = (LFTV.Domain.Enums.DayOfWeekEnum)((int)jour); // +1 car System.DayOfWeek commence à 0 pour dimanche
             var list = await _repository.GetByJourAsync(jourEnum);
             return list.Select(EmissionDto.FromEntity);
         }
@@ -47,6 +48,26 @@ namespace LFTV.Application.Services
             await _repository.AddAsync(entity);
             await _repository.SaveChangesAsync();
             return EmissionDto.FromEntity(entity);
+        }
+
+        private List<DayOfWeekEnum> ExpandDays(DayOfWeekEnum jour)
+        {
+            switch (jour)
+            {
+                case DayOfWeekEnum.LundiAVendredi:
+                    return new List<DayOfWeekEnum>
+            {
+                DayOfWeekEnum.Lundi, DayOfWeekEnum.Mardi, DayOfWeekEnum.Mercredi,
+                DayOfWeekEnum.Jeudi, DayOfWeekEnum.Vendredi
+            };
+                case DayOfWeekEnum.SamediDimanche:
+                    return new List<DayOfWeekEnum>
+            {
+                DayOfWeekEnum.Samedi, DayOfWeekEnum.Dimanche
+            };
+                default:
+                    return new List<DayOfWeekEnum> { jour };
+            }
         }
 
         public async Task UpdateAsync(int id, UpdateEmissionDto dto)
@@ -69,5 +90,7 @@ namespace LFTV.Application.Services
             _repository.Remove(entity);
             await _repository.SaveChangesAsync();
         }
+
+        
     }
 }

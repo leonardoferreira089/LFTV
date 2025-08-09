@@ -8,6 +8,8 @@
         Jeudi = 4,
         Vendredi = 5,
         Samedi = 6,
-        Dimanche = 7
+        Dimanche = 7,
+        LundiAVendredi = 8,     
+        SamediDimanche = 9         
     }
 }

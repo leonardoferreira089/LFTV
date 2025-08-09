@@ -45,10 +45,5 @@ namespace LFTV.API.Controllers
             return Ok(current);
         }
 
-        private DayOfWeekEnum ConvertToLftvJour(DayOfWeek systemJour)
-        {
-            int value = systemJour == DayOfWeek.Sunday ? 7 : (int)systemJour;
-            return (DayOfWeekEnum)value;
-        }
     }
 }

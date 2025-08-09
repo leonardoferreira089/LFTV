@@ -1,8 +1,11 @@
-﻿namespace LFTV.Application.DTOs
+﻿using LFTV.Domain.Enums;
+
+namespace LFTV.Application.DTOs
 {
     public class UpdateCalendarEntryDto
     {
-        public DateTime Date { get; set; }
+        public DayOfWeekEnum Jour { get; set; }
+        
         public int EmissionId { get; set; }
     }
 }

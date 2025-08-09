@@ -5,7 +5,7 @@ public class UpdateCalendarEntryDtoValidator : AbstractValidator<UpdateCalendarE
 {
     public UpdateCalendarEntryDtoValidator()
     {
-        RuleFor(x => x.Date)
+        RuleFor(x => x.Jour)
             .NotEmpty().WithMessage("La date est obligatoire.");
 
         RuleFor(x => x.EmissionId)

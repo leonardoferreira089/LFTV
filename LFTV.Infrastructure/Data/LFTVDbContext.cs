@@ -52,7 +52,7 @@ namespace LFTV.Infrastructure.Data
             modelBuilder.Entity<CalendarEntry>(entity =>
             {
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.Date).IsRequired();
+                entity.Property(e => e.Jour).IsRequired();
 
                 // Foreign Key relationship
                 entity.HasOne(e => e.Emission)
@@ -61,7 +61,7 @@ namespace LFTV.Infrastructure.Data
                       .OnDelete(DeleteBehavior.Cascade);
 
                 // Index for performance
-                entity.HasIndex(e => e.Date);
+                entity.HasIndex(e => e.Jour);
             });
 
             // History Configuration
@@ -126,15 +126,15 @@ namespace LFTV.Infrastructure.Data
 
             // Seed CalendarEntries
             modelBuilder.Entity<CalendarEntry>().HasData(
-                new CalendarEntry { Id = 1, Date = baseDate, EmissionId = 1, CreatedAt = createdDate },
-                new CalendarEntry { Id = 2, Date = baseDate, EmissionId = 2, CreatedAt = createdDate },
-                new CalendarEntry { Id = 3, Date = baseDate, EmissionId = 3, CreatedAt = createdDate },
-                new CalendarEntry { Id = 4, Date = baseDate.AddDays(1), EmissionId = 4, CreatedAt = createdDate },
-                new CalendarEntry { Id = 5, Date = baseDate.AddDays(1), EmissionId = 5, CreatedAt = createdDate },
-                new CalendarEntry { Id = 6, Date = baseDate.AddDays(1), EmissionId = 6, CreatedAt = createdDate },
-                new CalendarEntry { Id = 7, Date = baseDate.AddDays(2), EmissionId = 7, CreatedAt = createdDate },
-                new CalendarEntry { Id = 8, Date = baseDate.AddDays(2), EmissionId = 8, CreatedAt = createdDate },
-                new CalendarEntry { Id = 9, Date = baseDate.AddDays(2), EmissionId = 9, CreatedAt = createdDate }
+            new CalendarEntry { Id = 1, Jour = DayOfWeekEnum.Lundi, EmissionId = 1, CreatedAt = createdDate },
+            new CalendarEntry { Id = 2, Jour = DayOfWeekEnum.Lundi, EmissionId = 2, CreatedAt = createdDate },
+            new CalendarEntry { Id = 3, Jour = DayOfWeekEnum.Lundi, EmissionId = 3, CreatedAt = createdDate },
+            new CalendarEntry { Id = 4, Jour = DayOfWeekEnum.Mardi, EmissionId = 4, CreatedAt = createdDate },
+            new CalendarEntry { Id = 5, Jour = DayOfWeekEnum.Mardi, EmissionId = 5, CreatedAt = createdDate },
+            new CalendarEntry { Id = 6, Jour = DayOfWeekEnum.Mardi, EmissionId = 6, CreatedAt = createdDate },
+            new CalendarEntry { Id = 7, Jour = DayOfWeekEnum.Mercredi, EmissionId = 7, CreatedAt = createdDate },
+            new CalendarEntry { Id = 8, Jour = DayOfWeekEnum.Mercredi, EmissionId = 8, CreatedAt = createdDate },
+            new CalendarEntry { Id = 9, Jour = DayOfWeekEnum.Mercredi, EmissionId = 9, CreatedAt = createdDate }
             );
 
             // Seed History
