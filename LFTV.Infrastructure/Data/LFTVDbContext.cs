@@ -41,12 +41,14 @@ namespace LFTV.Infrastructure.Data
                 entity.Property(e => e.ImageUrl).HasMaxLength(500);
                 entity.Property(e => e.EpisodeUrl).HasMaxLength(500);
 
-                // Foreign Key relationship
-                entity.HasOne(e => e.Emission)
-                      .WithMany(e => e.Contents)
-                      .HasForeignKey(e => e.EmissionId)
-                      .OnDelete(DeleteBehavior.Cascade);
+
             });
+
+            modelBuilder.Entity<ProgramContent>()
+            .HasOne(pc => pc.Emission)
+            .WithOne(e => e.ProgramContent)
+            .HasForeignKey<ProgramContent>(pc => pc.EmissionId)
+            .OnDelete(DeleteBehavior.Restrict);
 
             // CalendarEntry Configuration
             modelBuilder.Entity<CalendarEntry>(entity =>
