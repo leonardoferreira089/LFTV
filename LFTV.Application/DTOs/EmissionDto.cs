@@ -10,6 +10,8 @@ namespace LFTV.Application.DTOs
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public string? ImageUrl { get; set; }
+        public int ProgramContentId { get; set; }
+        public ProgramContentDto? ProgramContent { get; set; }
         public DateTime CreatedAt { get; set; }
 
         public static EmissionDto FromEntity(LFTV.Domain.Entities.Emission entity)
@@ -22,8 +24,10 @@ namespace LFTV.Application.DTOs
                 StartTime = entity.StartTime,
                 EndTime = entity.EndTime,
                 ImageUrl = entity.ImageUrl,
+                ProgramContent = entity.ProgramContentId != null ? ProgramContentDto.FromEntity(entity.ProgramContentId) : null,
                 CreatedAt = entity.CreatedAt
             };
+
         }
     }
 }

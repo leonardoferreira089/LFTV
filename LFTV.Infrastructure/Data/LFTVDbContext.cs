@@ -41,14 +41,15 @@ namespace LFTV.Infrastructure.Data
                 entity.Property(e => e.ImageUrl).HasMaxLength(500);
                 entity.Property(e => e.EpisodeUrl).HasMaxLength(500);
 
-
+                // Ajout essentiel pour la relation 1:1
+                entity.Property(e => e.EmissionId).IsRequired();
+                entity.HasIndex(e => e.EmissionId).IsUnique();
             });
 
-            modelBuilder.Entity<ProgramContent>()
-            .HasOne(pc => pc.Emission)
-            .WithOne(e => e.ProgramContent)
-            .HasForeignKey<ProgramContent>(pc => pc.EmissionId)
-            .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Emission>()
+                .HasOne(e => e.ProgramContentId)
+                .WithOne(pc => pc.Emission)
+                .HasForeignKey<ProgramContent>(pc => pc.EmissionId);
 
             // CalendarEntry Configuration
             modelBuilder.Entity<CalendarEntry>(entity =>
@@ -99,31 +100,27 @@ namespace LFTV.Infrastructure.Data
             // Seed Emissions pour les 7 prochains jours
             modelBuilder.Entity<Emission>().HasData(
                 new Emission { Id = 1, Name = "Journal du Matin", Jour = DayOfWeekEnum.Lundi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-    new Emission { Id = 2, Name = "Journal de 13h", Jour = DayOfWeekEnum.Lundi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
-    new Emission { Id = 3, Name = "Film du Dimanche", Jour = DayOfWeekEnum.Dimanche, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate },
-
+                new Emission { Id = 2, Name = "Journal de 13h", Jour = DayOfWeekEnum.Lundi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
+                new Emission { Id = 3, Name = "Film du Dimanche", Jour = DayOfWeekEnum.Dimanche, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate },
                 new Emission { Id = 4, Name = "Journal du Matin - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
                 new Emission { Id = 5, Name = "Journal de 13h - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
                 new Emission { Id = 6, Name = "Série du Lundi - 30/06", Jour = DayOfWeekEnum.Mardi, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(21, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Serie", CreatedAt = createdDate },
-
-                // Jour 3 - 01/07/2025
                 new Emission { Id = 7, Name = "Journal du Matin - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(8, 0, 0), EndTime = new TimeSpan(8, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
                 new Emission { Id = 8, Name = "Journal de 13h - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(13, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=News", CreatedAt = createdDate },
                 new Emission { Id = 9, Name = "Film du Mardi - 01/07", Jour = DayOfWeekEnum.Mercredi, StartTime = new TimeSpan(20, 30, 0), EndTime = new TimeSpan(22, 30, 0), ImageUrl = "https://via.placeholder.com/300x200?text=Film", CreatedAt = createdDate }
             );
 
-            // Seed ProgramContents
+            // Seed ProgramContents, chaque ProgramContent lié à une Emission via EmissionId (relation 1:1)
             modelBuilder.Entity<ProgramContent>().HasData(
-                // Programmes pour les émissions
-                new ProgramContent { Id = 1, Name = "Actualités Nationales", Type = "News", Category = "Information", EmissionId = 1, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 2, Name = "Actualités Internationales", Type = "News", Category = "Information", EmissionId = 2, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 3, Name = "Le Parrain", Type = "Film", Category = "Drame", EmissionId = 3, IsWatched = false, ImageUrl = "https://via.placeholder.com/300x200?text=Le+Parrain", CreatedAt = createdDate },
-                new ProgramContent { Id = 4, Name = "Actualités du Matin", Type = "News", Category = "Information", EmissionId = 4, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 5, Name = "Journal de Midi", Type = "News", Category = "Information", EmissionId = 5, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 6, Name = "Breaking Bad", Type = "Série", Category = "Drame", EmissionId = 6, IsWatched = false, ImageUrl = "https://via.placeholder.com/300x200?text=Breaking+Bad", CreatedAt = createdDate },
-                new ProgramContent { Id = 7, Name = "Actualités du Matin", Type = "News", Category = "Information", EmissionId = 7, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 8, Name = "Journal de Midi", Type = "News", Category = "Information", EmissionId = 8, IsWatched = false, CreatedAt = createdDate },
-                new ProgramContent { Id = 9, Name = "Casablanca", Type = "Film", Category = "Romance", EmissionId = 9, IsWatched = false, ImageUrl = "https://via.placeholder.com/300x200?text=Casablanca", CreatedAt = createdDate }
+                new ProgramContent { Id = 1, Name = "Actualités Nationales", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Actu+Nat", EmissionId = 1, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 2, Name = "Actualités Internationales", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Actu+Int", EmissionId = 2, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 3, Name = "Le Parrain", Type = "Film", Category = "Drame", ImageUrl = "https://via.placeholder.com/300x200?text=Le+Parrain", EmissionId = 3, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 4, Name = "Actualités du Matin", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Actu+Matin", EmissionId = 4, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 5, Name = "Journal de Midi", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Journal+Midi", EmissionId = 5, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 6, Name = "Breaking Bad", Type = "Série", Category = "Drame", ImageUrl = "https://via.placeholder.com/300x200?text=Breaking+Bad", EmissionId = 6, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 7, Name = "Actualités du Matin", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Actu+Matin", EmissionId = 7, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 8, Name = "Journal de Midi", Type = "News", Category = "Information", ImageUrl = "https://via.placeholder.com/300x200?text=Journal+Midi", EmissionId = 8, IsWatched = false, CreatedAt = createdDate },
+                new ProgramContent { Id = 9, Name = "Casablanca", Type = "Film", Category = "Romance", ImageUrl = "https://via.placeholder.com/300x200?text=Casablanca", EmissionId = 9, IsWatched = false, CreatedAt = createdDate }
             );
 
             // Seed CalendarEntries

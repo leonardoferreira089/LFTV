@@ -16,6 +16,20 @@ namespace LFTV.Infrastructure.Repositories
             {
                 return await _dbSet.Where(e => e.Jour == jour).ToListAsync();
             }
+
+            public override async Task<Emission?> GetByIdAsync(int id)
+            {
+                return await _dbSet
+                    .Include(e => e.ProgramContentId)
+                    .FirstOrDefaultAsync(e => e.Id == id);
+            }
+
+            public override async Task<IEnumerable<Emission>> GetAllAsync()
+            {
+                return await _dbSet
+                    .Include(e => e.ProgramContentId)
+                    .ToListAsync();
+            }
         }
     }
 }

@@ -15,5 +15,6 @@ namespace LFTV.Infrastructure.Repositories
         {
             return await _dbSet.Where(pc => pc.EmissionId == emissionId).ToListAsync();
         }
+
     }
 }

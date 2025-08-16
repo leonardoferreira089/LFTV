@@ -10,6 +10,7 @@
         public string? ImageUrl { get; set; }
         public bool IsWatched { get; set; }
         public int EmissionId { get; set; }
+        public string? EmissionName { get; set; }
         public DateTime CreatedAt { get; set; }
 
         public static ProgramContentDto FromEntity(LFTV.Domain.Entities.ProgramContent entity)
@@ -24,6 +25,7 @@
                 ImageUrl = entity.ImageUrl,
                 IsWatched = entity.IsWatched,
                 EmissionId = entity.EmissionId,
+                EmissionName = entity.Emission?.Name,
                 CreatedAt = entity.CreatedAt
             };
         }

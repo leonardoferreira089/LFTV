@@ -36,7 +36,7 @@ namespace LFTV.Application.Services
 
         public async Task<EmissionDto> CreateAsync(CreateEmissionDto dto)
         {
-            var entity = new Emission
+            var emission = new Emission
             {
                 Name = dto.Name,
                 Jour = dto.Jour,
@@ -45,9 +45,26 @@ namespace LFTV.Application.Services
                 ImageUrl = dto.ImageUrl,
                 CreatedAt = DateTime.UtcNow
             };
-            await _repository.AddAsync(entity);
+
+            if (dto.ProgramContent != null)
+            {
+                var pc = new ProgramContent
+                {
+                    Name = dto.ProgramContent.Name,
+                    Type = dto.ProgramContent.Type,
+                    Category = dto.ProgramContent.Category,
+                    ImageUrl = dto.ProgramContent.ImageUrl,
+                    EpisodeUrl = dto.ProgramContent.EpisodeUrl,
+                    IsWatched = dto.ProgramContent.IsWatched,
+                    CreatedAt = DateTime.UtcNow,
+                    Emission = emission // Relation 1:1 !
+                };
+                emission.ProgramContentId = pc;
+            }
+
+            await _repository.AddAsync(emission);
             await _repository.SaveChangesAsync();
-            return EmissionDto.FromEntity(entity);
+            return EmissionDto.FromEntity(emission);
         }
 
         private List<DayOfWeekEnum> ExpandDays(DayOfWeekEnum jour)

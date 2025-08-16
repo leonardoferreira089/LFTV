@@ -4,6 +4,6 @@ namespace LFTV.Domain.Interfaces
 {
     public interface IProgramContentRepository : IRepository<ProgramContent>
     {
-        Task<IEnumerable<ProgramContent>> GetByEmissionIdAsync(int emissionId);
+        Task<IEnumerable<ProgramContent>> GetByEmissionIdAsync(int emissionId);        
     }
 }
