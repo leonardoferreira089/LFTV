@@ -20,14 +20,14 @@ namespace LFTV.Infrastructure.Repositories
             public override async Task<Emission?> GetByIdAsync(int id)
             {
                 return await _dbSet
-                    .Include(e => e.ProgramContentId)
+                    .Include(e => e.ProgramContent)
                     .FirstOrDefaultAsync(e => e.Id == id);
             }
 
             public override async Task<IEnumerable<Emission>> GetAllAsync()
             {
                 return await _dbSet
-                    .Include(e => e.ProgramContentId)
+                    .Include(e => e.ProgramContent)
                     .ToListAsync();
             }
         }

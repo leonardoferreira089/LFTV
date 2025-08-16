@@ -24,7 +24,7 @@ namespace LFTV.Application.DTOs
                 StartTime = entity.StartTime,
                 EndTime = entity.EndTime,
                 ImageUrl = entity.ImageUrl,
-                ProgramContent = entity.ProgramContentId != null ? ProgramContentDto.FromEntity(entity.ProgramContentId) : null,
+                ProgramContent = entity.ProgramContent != null ? ProgramContentDto.FromEntity(entity.ProgramContent) : null,
                 CreatedAt = entity.CreatedAt
             };
 

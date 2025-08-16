@@ -47,7 +47,7 @@ namespace LFTV.Infrastructure.Data
             });
 
             modelBuilder.Entity<Emission>()
-                .HasOne(e => e.ProgramContentId)
+                .HasOne(e => e.ProgramContent)
                 .WithOne(pc => pc.Emission)
                 .HasForeignKey<ProgramContent>(pc => pc.EmissionId);
 

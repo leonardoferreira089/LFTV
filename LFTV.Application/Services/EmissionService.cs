@@ -59,7 +59,7 @@ namespace LFTV.Application.Services
                     CreatedAt = DateTime.UtcNow,
                     Emission = emission // Relation 1:1 !
                 };
-                emission.ProgramContentId = pc;
+                emission.ProgramContent = pc;
             }
 
             await _repository.AddAsync(emission);

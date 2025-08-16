@@ -27,7 +27,7 @@ namespace LFTV.Domain.Entities
 
         // Navigation properties       
         
-        public ProgramContent ProgramContentId { get; set; } = null!;
+        public ProgramContent ProgramContent { get; set; } = null!;
         public ICollection<CalendarEntry> CalendarEntries { get; set; } = new List<CalendarEntry>();
     }
 }
