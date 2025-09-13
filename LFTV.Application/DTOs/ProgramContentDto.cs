@@ -9,7 +9,7 @@
         public string? EpisodeUrl { get; set; }
         public string? ImageUrl { get; set; }
         public bool IsWatched { get; set; }
-        public int EmissionId { get; set; }
+        public int? EmissionId { get; set; }
         public string? EmissionName { get; set; }
         public DateTime CreatedAt { get; set; }
 

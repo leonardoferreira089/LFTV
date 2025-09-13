@@ -41,15 +41,13 @@ namespace LFTV.Infrastructure.Data
                 entity.Property(e => e.ImageUrl).HasMaxLength(500);
                 entity.Property(e => e.EpisodeUrl).HasMaxLength(500);
 
-                // Ajout essentiel pour la relation 1:1
-                entity.Property(e => e.EmissionId).IsRequired();
-                entity.HasIndex(e => e.EmissionId).IsUnique();
             });
 
             modelBuilder.Entity<Emission>()
                 .HasOne(e => e.ProgramContent)
                 .WithOne(pc => pc.Emission)
-                .HasForeignKey<ProgramContent>(pc => pc.EmissionId);
+                .HasForeignKey<ProgramContent>(pc => pc.EmissionId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             // CalendarEntry Configuration
             modelBuilder.Entity<CalendarEntry>(entity =>

@@ -10,5 +10,6 @@ namespace LFTV.Application.DTOs
         public TimeSpan EndTime { get; set; }
         public string? ImageUrl { get; set; }
         public int ProgramContentId { get; set; }
+
     }
 }
