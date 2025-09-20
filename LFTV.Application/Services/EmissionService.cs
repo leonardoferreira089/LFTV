@@ -56,8 +56,7 @@ namespace LFTV.Application.Services
                     ImageUrl = dto.ProgramContent.ImageUrl,
                     EpisodeUrl = dto.ProgramContent.EpisodeUrl,
                     IsWatched = dto.ProgramContent.IsWatched,
-                    CreatedAt = DateTime.UtcNow,
-                    Emission = emission // Relation 1:1 !
+                    CreatedAt = DateTime.UtcNow,                    
                 };
                 emission.ProgramContent = pc;
             }

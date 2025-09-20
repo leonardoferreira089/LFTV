@@ -8,5 +8,6 @@
         public int EmissionId { get; set; }
         public string? EpisodeUrl { get; set; }
         public string? ImageUrl { get; set; }
+        public int? EmissionSelectionId { get; set; }
     }
 }

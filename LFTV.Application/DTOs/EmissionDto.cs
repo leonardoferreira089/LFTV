@@ -10,7 +10,7 @@ namespace LFTV.Application.DTOs
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public string? ImageUrl { get; set; }
-        public int ProgramContentId { get; set; }
+        public int? ProgramContentId { get; set; }
         public ProgramContentDto? ProgramContent { get; set; }
         public DateTime CreatedAt { get; set; }
 
@@ -24,6 +24,7 @@ namespace LFTV.Application.DTOs
                 StartTime = entity.StartTime,
                 EndTime = entity.EndTime,
                 ImageUrl = entity.ImageUrl,
+                ProgramContentId = entity.ProgramContentId, 
                 ProgramContent = entity.ProgramContent != null ? ProgramContentDto.FromEntity(entity.ProgramContent) : null,
                 CreatedAt = entity.CreatedAt
             };

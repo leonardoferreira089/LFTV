@@ -23,9 +23,7 @@
                 Category = entity.Category,
                 EpisodeUrl = entity.EpisodeUrl,
                 ImageUrl = entity.ImageUrl,
-                IsWatched = entity.IsWatched,
-                EmissionId = entity.EmissionId,
-                EmissionName = entity.Emission?.Name,
+                IsWatched = entity.IsWatched,                                
                 CreatedAt = entity.CreatedAt
             };
         }

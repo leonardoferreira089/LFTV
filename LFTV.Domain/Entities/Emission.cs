@@ -26,6 +26,7 @@ namespace LFTV.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties       
+        public int? ProgramContentId { get; set; }
         public ProgramContent? ProgramContent { get; set; }
         public ICollection<CalendarEntry> CalendarEntries { get; set; } = new List<CalendarEntry>();
     }

@@ -28,7 +28,7 @@ namespace LFTV.Application.Services
 
         public async Task<IEnumerable<ProgramContentDto>> GetByEmissionIdAsync(int emissionId)
         {
-            var list = await _repository.GetByEmissionIdAsync(emissionId);
+            var list = await _repository.GetByEmissionSelectionIdAsync(emissionId);
             return list.Select(pc => ProgramContentDto.FromEntity(pc));
         }
 
@@ -39,7 +39,7 @@ namespace LFTV.Application.Services
                 Name = dto.Name,
                 Type = dto.Type,
                 Category = dto.Category,
-                EmissionId = dto.EmissionId,
+                EmissionSelectionId = dto.EmissionSelectionId, // <-- le champ de sélection UI
                 EpisodeUrl = dto.EpisodeUrl,
                 ImageUrl = dto.ImageUrl,
                 IsWatched = false,

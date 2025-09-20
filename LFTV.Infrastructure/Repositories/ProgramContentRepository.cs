@@ -11,9 +11,11 @@ namespace LFTV.Infrastructure.Repositories
         {
         }
 
-        public async Task<IEnumerable<ProgramContent>> GetByEmissionIdAsync(int emissionId)
+        public async Task<IEnumerable<ProgramContent>> GetByEmissionSelectionIdAsync(int? emissionSelectionId)
         {
-            return await _dbSet.Where(pc => pc.EmissionId == emissionId).ToListAsync();
+            if (emissionSelectionId == null)
+                return await _dbSet.Where(pc => pc.EmissionSelectionId == null).ToListAsync();
+            return await _dbSet.Where(pc => pc.EmissionSelectionId == emissionSelectionId).ToListAsync();
         }
 
     }
