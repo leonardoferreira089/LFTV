@@ -23,9 +23,10 @@ namespace LFTV.Infrastructure.Data
             // Emission Configuration
             modelBuilder.Entity<Emission>()
                 .HasOne(e => e.ProgramContent)
-                .WithMany() // Pas de navigation inverse
+                .WithMany(pc => pc.Emissions) // navigation inverse
                 .HasForeignKey(e => e.ProgramContentId)
                 .OnDelete(DeleteBehavior.SetNull);
+
 
             // ProgramContent Configuration
             modelBuilder.Entity<ProgramContent>(entity =>

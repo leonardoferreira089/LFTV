@@ -24,6 +24,7 @@ namespace LFTV.Domain.Entities
 
         public bool IsWatched { get; set; } = false;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public ICollection<Emission> Emissions { get; set; } = new List<Emission>();
         public int? EmissionSelectionId { get; set; }
         public ICollection<History> HistoryEntries { get; set; } = new List<History>();
     }

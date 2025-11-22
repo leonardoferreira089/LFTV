@@ -9,8 +9,8 @@
         public string? EpisodeUrl { get; set; }
         public string? ImageUrl { get; set; }
         public bool IsWatched { get; set; }
-        public int? EmissionId { get; set; }
-        public string? EmissionName { get; set; }
+        public int? EmissionSelectionId { get; set; }
+        public List<EmissionDto>? Emissions { get; set; }
         public DateTime CreatedAt { get; set; }
 
         public static ProgramContentDto FromEntity(LFTV.Domain.Entities.ProgramContent entity)
@@ -24,7 +24,9 @@
                 EpisodeUrl = entity.EpisodeUrl,
                 ImageUrl = entity.ImageUrl,
                 IsWatched = entity.IsWatched,                                
-                CreatedAt = entity.CreatedAt
+                CreatedAt = entity.CreatedAt,
+                EmissionSelectionId = entity.EmissionSelectionId,
+                Emissions = entity.Emissions?.Select(EmissionDto.FromEntity).ToList()
             };
         }
     }
